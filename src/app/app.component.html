@@ -1,3 +1,9 @@
+<div>
+  Example1
+</div>
+<div>
+  day of week and hour flag
+</div>
 <table-input [(ngModel)]="timetable"
              [rowLabels]="tableRowLabels"
              [colLabels]="tableColLabels"
@@ -5,4 +11,20 @@
              [cols]="24">
 </table-input>
 
-{{timetable|json}}
+params: {{timetable|json}}
+
+<div>
+  Example2
+</div>
+<div>
+
+</div>
+<table-input [(ngModel)]="sampleParam"
+             [rowLabels]="tableRowLabels2"
+             [colLabels]="tableColLabels2"
+             [rows]="3"
+             [cols]="3">
+</table-input>
+
+params: {{sampleParam|json}}
+

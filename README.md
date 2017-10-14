@@ -1,27 +1,59 @@
 # NgxTableInput
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.5.
+table input component for angular
 
-## Development server
+using ng-packagr
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+It is a form part that can input flags for multiple items horizontally and vertically
 
-## Code scaffolding
+For example, you can check on combination of the days of the week and time
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+[demo](https://swfz.github.io/ngx-table-input/ "ngx-table-input demo")
 
-## Build
+# Usage
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+```
+npm install -S ngx-table-input
+```
 
-## Running unit tests
+And import into your NgModule
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+import {NgModule} from '@angular/core';
 
-## Running end-to-end tests
+@NgModule({
+  imports: [TableInputModule],
+})
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+using your component.
 
-## Further help
+- your.component.html
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```
+<table-input [(ngModel)]="params"
+             [rowLabels]="['hoge','fuga','piyo']"
+             [colLabels]="['AA','BB','CC']"
+             [rows]="3"
+             [cols]="3">
+</table-input>
+```
+
+# Reference
+## inputs
+### rows
+- type: number
+    - number of lines
+
+### cols
+- type: number
+    - number of columns
+
+### rowlabels
+- type: string[]
+    - line labels
+
+### collabels
+- type: string[]
+    - column labels
+
