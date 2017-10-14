@@ -20,6 +20,7 @@ And import into your NgModule
 
 ```
 import {NgModule} from '@angular/core';
+import {TableInputModule} from 'ngx-table-input';
 
 @NgModule({
   imports: [TableInputModule],
